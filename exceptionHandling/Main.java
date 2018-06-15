@@ -3,31 +3,38 @@ import java.util.InputMismatchException;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
-
-
-System.out.println("what's your age?");
-
-int name;
-boolean continueLoop = true;
-
+int n, d;
 
 Scanner sObj = new Scanner(System.in);
- name = sObj.nextInt();
+
+boolean continueLoop = true;
 
 do {
-try {
-System.out.println(name);
+
+  try {
+System.out.println("enter a numerator");
+
+n = sObj.nextInt();
+
+
+System.out.println("enter a denominator");
+
+d = sObj.nextInt();
+
+
+System.out.println(divide(n, d));
 continueLoop = false;
-}
-
-catch(InputMismatchException error){
-System.out.println(error);
-}
-
-}
-
-while (continueLoop);
-  
   }
+
+  catch(ArithmeticException error){
+    System.out.println(error);
+  }
+}
+while (continueLoop);
+  }
+
+public static int divide(int num, int denom){
+  return num/denom;
+}
+
 }
