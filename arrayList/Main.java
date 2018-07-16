@@ -1,38 +1,40 @@
 import java.util.ArrayList;
-
+import java.lang.reflect.Field;
 
 class Main {
   public static void main(String[] args) {
+  
+ArrayList <Integer> age = new ArrayList<>();
 
+age.add(73);
+age.add(13);
+age.add(53);
+age.add(43);
 
-String [] season = {"spring", "summer"};
+for (int i =0; i < age.size(); i++){
+  System.out.println(age.get(i));
+}
+  
+//ArrayList<String> exams = new ArrayList<>();
 
-ArrayList<String> exams = new ArrayList<>();
+System.out.println();
 
-exams.add("calc");
+String [] names = {"Alex", "Mike", "Ray", "Greg"};
 
-exams.add("history");
-
-
-//System.out.println(exams.get(0));
-
-for (int i=0; i < exams.size(); i++)
+for (int j = 0; j < names.length; j++)
 {
-  System.out.println(exams.get(i));
+  System.out.println(names[j]);
 }
 
-exams.add(1, "squids");
+Object obj = new Integer(100);
 
-for (int i=0; i < exams.size(); i++)
-{
-  System.out.println(exams.get(i));
-}
+System.out.println(obj);
 
+System.out.println(obj.getClass());
 
-for (int i =0;i < season.length; i++){
-  System.out.println(season[i]);
-}
+int z = 88;
 
+// string alexName = "Alex";
 
   }
 }
